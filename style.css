@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQA7QMBIgACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAAAAQIDB//EAB0QAQEBAAMBAQEBAAAAAAAAAAABMQIRQSFRQjL/xAAYAQEBAQEBAAAAAAAAAAAAAAABAgADBf/EABcRAQEBAQAAAAAAAAAAAAAAAAABETH/2gAMAwEAAhEDEQA/APXJVYlajyXnqAotL2hFKVUmKpmUmqdfU3rLIsgvS8OJSLYSM2AthIYcQXpGrYzTwuniUoAGSxlqp0hNZ5YccOeU4ZADpLGukorMVlqep0A3I1CRelEFiektEISKhaAWpIvX1GuhjLIvRFWtAvwn1mFkBmOmbGkrMxRbqJRU6StJQEqKdIxmORxxeUJicSJcVKzOfHadLx9WpS0osdFRYl1qM+nC1CKRRwUPCrEmtMxpo0WKzFVFHLCCswFQsqFAzN0WpRiUFAGbqTWrqepDN1PFuniQhVLjWDHPj6UnqoDaxIq4ppnr60erwhFCRfEa8MMYmtJJ9a6aNIkaRSpBUZi0TkrMC9EZkSqljBAOhgSioKGbpMLqzIgJChWoc/1Kv6lc0ukaSK6RahFUQAxlkVI0VMxpma0SAFgChmeXjTPLxpmACRKqUUVlST4AInTVxGoZukwp4hLNqLUTUseUpcpXNLtCEWOzoRQUQBoyxUiqVCKkViApZBUZmbrcxj+mvGjRQCUSqlTRSYJMABAZkSqlTUs1FohLFxK1yxlFS7QIR1WsCHqioixmWaqTVqlJ21GPW4zQVFKguBcLMT/TVSaqYAAshRKGEPE7CVSgAJcKAJUaZ7TRWeWIvLERUupAjotQKSLEiwxlVFKmfW4x600aKAohQrFIpAAEGYSqzyFFGVqBNUAMlBKKC1nv5CsSotTa1UKidDrGkg6xahFJRYKYZBUmrSWfWkmqWAGIAzADMAXGAxZ9aRNaoKMlAQMJVrNTU1GWkuIqWalaZTQ7wB2dFigoigYqE1aDMkUCwAzADMAMwXAZmaAkUAYInoAFZqCaKJcBFSiAkP/Z);
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+#title {
+    text-align: center;
+    color: #1B5E20;
+}
+
+#description {
+    text-align: center;
+}
+
+#survey-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+legend {
+    color: #45a049;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    padding: 10px 20px 0; /* Combine padding values for clarity */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input, select, textarea {
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+fieldset input[type="checkbox"]
+{
+    display: flex;
+    align-items: center; /* Aligns checkboxes/radios vertically with the text */
+    margin-bottom: 10px; /* Adds space below each label for consistency */
+    vertical-align: top;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+textarea {
+    vertical-align: top;
+    min-height: 100px;
+}
+
+label input[type="checkbox"], 
+label input[type="radio"] {
+    display: inline-block;
+    margin-right: 10px;
+    width: auto;
+}
+
+/* radio/checkbox accent styling */
+input[type="checkbox"]:checked, 
+input[type="radio"]:checked {
+    accent-color: #4CAF50; /* Changes the color when the checkbox is checked */
+}
+
+/* radio/checkbox hover styling */
+input[type="checkbox"]:hover, 
+input[type="radio"]:hover,
+label[for]:hover {
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+/* Update for the skills section */
+fieldset:last-of-type label {
+    display: flex; /* Use flex to align checkbox and text horizontally */
+    align-items: center; /* Center checkbox with text vertically */
+    margin-bottom: 10px; /* Space below each skill label */
+}
+
+button#submit {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#submit:hover {
+    background-color: #45a049;
+}
