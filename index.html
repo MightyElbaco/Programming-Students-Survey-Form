@@ -10,11 +10,10 @@
 
 <body>
     <h1 id="title">Programming Students Survey Form</h1>
-    <p id="description">This survey is designed to gather insights from programming students about their learning experiences, challenges, and areas for improvement.</p>
+    <p id="description">This survey gathers feedback from programming students</p>
+    <p id="description">to improve learning experiences and provide better resources.</p>
 
-    <p id="description">Your responses will help in creating more tailored educational content and resources to support your development as future software engineers.</p>
-
-    <form id="survey-form" name="survey-form">
+    <form id="survey-form" name="survey-form" onsubmit="return checkFields()">
         <fieldset>
             <legend>Personal Information</legend>
             <label id="name-label" for="name">
@@ -27,10 +26,10 @@
             </label>
             <label id="number-label" for="number">
                 How old are you?
-                <input id="number" type="number" min="5" max="200" placeholder="Your age in years">
+                <input id="number" type="number" min="5" max="200" placeholder="Your age in years" required>
             </label>
             <label id="dropdown-label" for="dropdown">Select Your Gender:</label>
-            <select id="dropdown">
+            <select id="dropdown" required>
                 <option value="null">Select Gender</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -38,73 +37,92 @@
             </select>
             <label id="about-label" for="about-you">
                 Write shortly about yourself:
-                <textarea id="about-you" placeholder="Anything about you, such as your hobbies or best qualities."></textarea>
+                <textarea id="about-you" placeholder="Anything about you, such as your hobbies or best qualities." required></textarea>
             </label>
         </fieldset>
 
         <fieldset>
-    <legend>Employment</legend>
-    <p>Are you employed?</p>
+            <legend>Employment</legend>
+            <p>Are you employed?</p>
 
-    <label id="employed-label" for="employed">
-        <input id="employed" type="radio" name="employment-status" value="employed">
-        Employed
-    </label>
+            <label id="employed-label" for="employed">
+                <input id="employed" type="radio" name="employment-status" value="employed" required>
+                Employed
+            </label>
 
-    <label id="unemployed-label" for="unemployed">
-        <input id="unemployed" type="radio" name="employment-status" value="unemployed">
-        Unemployed
-    </label>
-</fieldset>
+            <label id="unemployed-label" for="unemployed">
+                <input id="unemployed" type="radio" name="employment-status" value="unemployed" required>
+                Unemployed
+            </label>
+        </fieldset>
 
         <fieldset>
-    <legend>Skills</legend>
-    <p>Check the skills you are highly experienced in:</p>
-    <label id="problem-solving-label" for="problem-solving" class="inline-group">
-        <input id="problem-solving" type="checkbox" value="problem-solving"> Problem-solving
-    </label>
-    <label id="cprogramminglanguages-label" for="cprogramminglanguages" class="inline-group">
-        <input id="cprogramminglanguages" type="checkbox" value="Cprogramminglanguages"> C programming languages
-    </label>
-    <label id="javascript-label" for="javascript" class="inline-group">
-    <input id="javascript" type="checkbox" value="javascript"> JavaScript
-</label>
-<label id="python-label" for="python" class="inline-group">
-    <input id="python" type="checkbox" value="python"> Python
-</label>
-<label id="java-label" for="java" class="inline-group">
-    <input id="java" type="checkbox" value="java"> Java
-</label>
-<label id="csharp-label" for="csharp" class="inline-group">
-    <input id="csharp" type="checkbox" value="csharp"> C#
-</label>
-<label id="sql-label" for="sql" class="inline-group">
-    <input id="sql" type="checkbox" value="sql"> SQL
-</label>
-<label id="typescript-label" for="typescript" class="inline-group">
-    <input id="typescript" type="checkbox" value="typescript"> TypeScript
-</label>
-<label id="go-label" for="go" class="inline-group">
-    <input id="go" type="checkbox" value="go"> Go (Golang)
-</label>
-<label id="swift-label" for="swift" class="inline-group">
-    <input id="swift" type="checkbox" value="swift"> Swift
-</label>
-<label id="php-label" for="php" class="inline-group">
-    <input id="php" type="checkbox" value="php"> PHP
-</label>
-<label id="ruby-label" for="ruby" class="inline-group">
-    <input id="ruby" type="checkbox" value="ruby"> Ruby
-</label>
+            <legend>Skills</legend>
+            <p>Check the skills you are highly experienced in:</p>
+            <label id="problem-solving-label" for="problem-solving" class="inline-group">
+                <input id="problem-solving" type="checkbox" value="problem-solving"> Problem-solving
+            </label>
+            <label id="cprogramminglanguages-label" for="cprogramminglanguages" class="inline-group">
+                <input id="cprogramminglanguages" type="checkbox" value="Cprogramminglanguages"> C programming languages
+            </label>
+            <label id="javascript-label" for="javascript" class="inline-group">
+                <input id="javascript" type="checkbox" value="javascript"> JavaScript
+            </label>
+            <label id="python-label" for="python" class="inline-group">
+                <input id="python" type="checkbox" value="python"> Python
+            </label>
+            <label id="java-label" for="java" class="inline-group">
+                <input id="java" type="checkbox" value="java"> Java
+            </label>
+            <label id="csharp-label" for="csharp" class="inline-group">
+                <input id="csharp" type="checkbox" value="csharp"> C#
+            </label>
+            <label id="sql-label" for="sql" class="inline-group">
+                <input id="sql" type="checkbox" value="sql"> SQL
+            </label>
+            <label id="typescript-label" for="typescript" class="inline-group">
+                <input id="typescript" type="checkbox" value="typescript"> TypeScript
+            </label>
+            <label id="go-label" for="go" class="inline-group">
+                <input id="go" type="checkbox" value="go"> Go (Golang)
+            </label>
+            <label id="swift-label" for="swift" class="inline-group">
+                <input id="swift" type="checkbox" value="swift"> Swift
+            </label>
+            <label id="php-label" for="php" class="inline-group">
+                <input id="php" type="checkbox" value="php"> PHP
+            </label>
+            <label id="ruby-label" for="ruby" class="inline-group">
+                <input id="ruby" type="checkbox" value="ruby"> Ruby
+            </label>
+        </fieldset>
 
-</fieldset>
-
-<label id="terms-label" for="terms" class="inline-group">
-<input id="terms" value="accepted" type="checkbox">
-I accept all <a href="">terms & conditions</a>
-</label>
+        <label id="terms-label" for="terms" class="inline-group">
+            <input id="terms" value="accepted" type="checkbox" required>
+            <a href="">Terms and Conditions</a>: Survey responses are confidential and voluntary.
+        </label>
 
         <button id="submit" type="submit">Submit</button>
     </form>
+
+    <script>
+        function checkFields() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const number = document.getElementById("number").value;
+            const dropdown = document.getElementById("dropdown").value;
+            const aboutYou = document.getElementById("about-you").value;
+            const employmentStatus = document.querySelector('input[name="employment-status"]:checked');
+            const termsAccepted = document.getElementById("terms").checked;
+
+            if (name && email && number && dropdown !== "null" && aboutYou && employmentStatus && termsAccepted) {
+                alert("Thank you so much! This information will help us a lot to develop the volunteer educational system.");
+                return true; // Allow form submission
+            } else {
+                alert("Please fill in all fields.");
+                return false; // Prevent form submission
+            }
+        }
+    </script>
 </body>
 </html>
